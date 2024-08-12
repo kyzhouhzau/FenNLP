@@ -5,6 +5,7 @@ att.png
 /build/
 /dist/
 fennlp.egg-info/
+/data/
 
 # idea
 .idea/
