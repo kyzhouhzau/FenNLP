@@ -427,7 +427,7 @@ class TUDataset:
         self.name = name
         self.data_dir = data_dir
         self.split = split
-        self.url = "http://ls11-www.cs.tu-dortmund.de/people/morris/graphkerneldatasets"
+        self.url = "https://www.chrsmrrs.com/graphkerneldatasets"
         if not os.path.exists("{}/{}".format(data_dir, name)):
             self.download()
         self.x, self.y, self.edge_index, self.edge_attr, self.num_nodes, self.batch = self.read_data(self.data_dir,
