@@ -1,6 +1,7 @@
 #! encoding:utf-8
 import glob
 import os
+import pathlib
 import pickle as pkl
 import sys
 from collections import defaultdict
@@ -664,7 +665,7 @@ class Sminarog():
     def download(self):
         data_dir = os.path.join(self.data_dir, self.data)
         if not os.path.exists(data_dir):
-            os.mkdir(data_dir)
+            pathlib.Path(data_dir).mkdir(parents=True, exist_ok=True)
         for name in self.raw_file(self.data.lower()):
             url = "{}/{}".format(self.url, name)
             outpath = "{}/{}".format(data_dir, name)
