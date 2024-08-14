@@ -427,7 +427,7 @@ class TUDataset:
         self.name = name
         self.data_dir = data_dir
         self.split = split
-        self.url = "http://ls11-www.cs.tu-dortmund.de/people/morris/graphkerneldatasets"
+        self.url = "https://www.chrsmrrs.com/graphkerneldatasets"
         if not os.path.exists("{}/{}".format(data_dir, name)):
             self.download()
         self.x, self.y, self.edge_index, self.edge_attr, self.num_nodes, self.batch = self.read_data(self.data_dir,
@@ -642,7 +642,7 @@ class Sminarog():
         self.data_dir = data_dir
         self.data = data
         self.embedding = embedding
-        self.url = "https://www.cs.umb.edu/~smimarog/textmining/datasets/"
+        self.url = "https://raw.githubusercontent.com/Cynwell/Text-Level-GNN/main"
         self.download()
         if not os.path.exists("glove"):
             self.download_glove()
@@ -681,7 +681,7 @@ class Sminarog():
     def download_glove(self):
         # if not os.path.exists("embedding"):
         #     os.mkdir("embedding")
-        url = "http://downloads.cs.stanford.edu/nlp/data/{}"
+        url = "https://downloads.cs.stanford.edu/nlp/data/{}"
         if self.embedding[:5] == "glove":
             url = url.format("glove.6B.zip")
             outpath = "{}.zip".format("glove.6B.zip")

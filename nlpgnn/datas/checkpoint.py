@@ -103,7 +103,7 @@ class LoadCheckpoint(object):
                 self.ungz(filename)
         if model in ["gpt2", "gpt"]:
             for filename in self.all_files:
-                self.url = "https://storage.googleapis.com/gpt-2/models/" + self.gpt_size + "/" + filename
+                self.url = "https://openaipublic.blob.core.windows.net/gpt-2/models/" + self.gpt_size + "/" + filename
                 # if not os.path.exists(self.gpt_base_dir):
                 self.size = self.getsize(self.url)
                 if os.path.exists(os.path.join(self.gpt_base_dir, filename)):
