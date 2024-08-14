@@ -6,6 +6,7 @@ att.png
 /dist/
 fennlp.egg-info/
 **/data/
+glove/
 
 # idea
 .idea/
