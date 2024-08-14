@@ -12,7 +12,7 @@ from .attention import GPTAttention
 class MLP(tf.keras.layers.Layer):
     def __init__(self, num_attention_heads, initializer_range,
                  resid_pdrop_rate, name='mlp', **kwargs):
-        super(MLP, self).__init__(name, **kwargs)
+        super(MLP, self).__init__(name=name, **kwargs)
         self.resid_pdrop_rate = resid_pdrop_rate
         self.num_attention_heads = num_attention_heads
         self.initializer_range = initializer_range

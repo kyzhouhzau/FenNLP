@@ -51,8 +51,8 @@ for epoch in range(500):
             print("Epoch:{}\tLoss:{:.4f}\tHit@5:{:.4f}\tHit@10:{:.4f}\tMRR{:.4f}\n".format(epoch, np.mean(losses),
                                                                                            hit5, hit10, MRR))
         # For filter Warning in calculate gradient of moving_mean and moving_variance
-        grads = tape.gradient(loss, model.trainable_variable)
+        grads = tape.gradient(loss, model.trainable_variables)
         optimizer.apply_gradients(
-            grads_and_vars=zip(grads, model.trainable_variable))
+            grads_and_vars=zip(grads, model.trainable_variables))
         Batch += 1
 
